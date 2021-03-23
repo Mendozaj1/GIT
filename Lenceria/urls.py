@@ -18,6 +18,9 @@ from django.urls import path
 from Lenceria1 import views
 from django.conf import settings
 
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
@@ -29,6 +32,9 @@ urlpatterns = [
     path('Lenceria_hombre/', views.lenceria_hombre, name = 'Lenceria_hombre'),
     path('Lenceria_mujer/', views.lenceria_mujer, name = 'Lenceria_mujer'),
     path('Lubricante_cosmeticos/', views.lubricante_cosmeticos, name = 'Lubricante_cosmeticos'),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 # cargar imagenes
