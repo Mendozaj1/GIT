@@ -25,7 +25,7 @@ SECRET_KEY = 'nalp#o-mlmrya#os=(0q&a#m1bnu@qy08!$cp(=m92^7sc9z)h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'lenceriaorellana.herokuapp.com/']
 
 
 # Application definition
