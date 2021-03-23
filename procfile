@@ -1,1 +1,1 @@
-web: gunicorn Lenceria.wsgi --log-file -
+web: gunicorn GIT.wsgi --log-file -
